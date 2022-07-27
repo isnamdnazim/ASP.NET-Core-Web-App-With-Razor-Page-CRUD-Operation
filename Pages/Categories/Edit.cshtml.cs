@@ -5,19 +5,23 @@ using RazorWebApplication.Model;
 namespace RazorWebApplication.Pages.Categories
 {
     [BindProperties]
-    public class CreateModel : PageModel
+    public class EditModel : PageModel
     {
         private readonly ApplicationDbContext _db;
      
         public Category Category { get; set; }
 
-        public CreateModel(ApplicationDbContext db)
+        public EditModel(ApplicationDbContext db)
         {
             _db = db;
         }
 
-        public void OnGet()
+        public void OnGet(int id)
         {
+            Category = _db.category.Find(id);
+            //Category = _db.category.FirstOrDefault(u=> u.Id ==id);
+            //Category = _db.category.SingleOrDefault(u=> u.Id==id);
+            //Category = _db.category.Where(u=> u.Id==id).FirstOrDefault();
         }
         public async Task<IActionResult> OnPost(Category category)
         {
@@ -27,9 +31,9 @@ namespace RazorWebApplication.Pages.Categories
             }
             if (ModelState.IsValid)
             {
-                await _db.category.AddAsync(Category);
+                _db.category.Update(Category);
                 await _db.SaveChangesAsync();
-                TempData["success"] = "Category Created Successfully";
+                TempData["success"] = "Category Updated Successfully";
                 return RedirectToPage("Index");
             }
             return Page();

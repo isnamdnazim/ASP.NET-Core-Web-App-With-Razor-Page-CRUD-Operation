@@ -1,24 +1,25 @@
 ﻿@page
-@model RazorWebApplication.Pages.Categories.CreateModel
+@model RazorWebApplication.Pages.Categories.DeleteModel
 
 <form method="post">
+    <input hidden asp-for="Category.Id" />
     <div class="border p-3 mt-4">
         <div class="row pb-2">
-            <h2 class="text-primary pl-3">Create Category</h2>
+            <h2 class="text-primary pl-3">Delete Category</h2>
             <hr />
         </div>
         <div asp-validation-summary="All"></div>
         <div class="mb-3">
             <label asp-for="Category.Name"></label>
-            <input class="form-control" asp-for="Category.Name"/>
+            <input disabled class="form-control" asp-for="Category.Name"/>
             <span asp-validation-for="Category.Name" class="text-danger"></span>
         </div>
         <div class="mb-3">
             <label asp-for="Category.DisplayOrder"></label>
-            <input class="form-control" asp-for="Category.DisplayOrder"/>
+            <input disabled class="form-control" asp-for="Category.DisplayOrder"/>
             <span asp-validation-for="Category.DisplayOrder" class="text-danger"></span>
         </div>
-        <button type="submit" class="btn btn-primary" style="width: 150px">Create</button>
+        <button type="submit" class="btn btn-danger" style="width: 150px">Delete</button>
         <a asp-page="Index" class="btn btn-secondary" style="width:150px">Back To List</a>
     </div>
 </form>
