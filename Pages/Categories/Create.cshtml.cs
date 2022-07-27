@@ -21,9 +21,18 @@ namespace RazorWebApplication.Pages.Categories
         }
         public async Task<IActionResult> OnPost(Category category)
         {
-            await _db.category.AddAsync(Category);
-            await _db.SaveChangesAsync();
-            return RedirectToPage("Index");
+            if(Category.Name == Category.DisplayOrder.ToString())
+            {
+                ModelState.AddModelError("Category.Name", "The Display Order Cannot exactly match the Name!");
+            }
+            if (ModelState.IsValid)
+            {
+                await _db.category.AddAsync(Category);
+                await _db.SaveChangesAsync();
+                return RedirectToPage("Index");
+            }
+            return Page();
+            
         }
     }
 }
