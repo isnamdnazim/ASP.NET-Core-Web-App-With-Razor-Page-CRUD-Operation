@@ -11,9 +11,17 @@ build_property.RootNamespace = RazorWebApplication
 build_property.ProjectDir = C:\Users\isnam\OneDrive\Desktop\Projects\Udemy\Complete guide to ASP.NET Core MVC (.NET 6)\RazorWebApplication\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
-build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = true
 build_property.MSBuildProjectDirectory = C:\Users\isnam\OneDrive\Desktop\Projects\Udemy\Complete guide to ASP.NET Core MVC (.NET 6)\RazorWebApplication
 build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/isnam/OneDrive/Desktop/Projects/Udemy/Complete guide to ASP.NET Core MVC (.NET 6)/RazorWebApplication/Pages/Categories/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/isnam/OneDrive/Desktop/Projects/Udemy/Complete guide to ASP.NET Core MVC (.NET 6)/RazorWebApplication/Pages/Categories/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/isnam/OneDrive/Desktop/Projects/Udemy/Complete guide to ASP.NET Core MVC (.NET 6)/RazorWebApplication/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
